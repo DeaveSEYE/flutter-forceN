@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:listo/pages/register.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -147,11 +148,11 @@ class _LoginState extends State<Login> {
                     const Text('Vous n\'avez pas de compte? '),
                     GestureDetector(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const Register()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Register()),
+                        );
                       },
                       child: const Text(
                         'S\'inscrire',
