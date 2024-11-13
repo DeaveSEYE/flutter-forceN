@@ -4,7 +4,7 @@ import 'package:flutter_signin_button/flutter_signin_button.dart'; //permet daff
 import 'package:listo/core/theme/colors.dart'; // class des couleur utiliser dans lapplication
 import 'package:listo/core/theme/widgets.dart'; //class des widgets reutilisable
 import 'package:listo/core/utils/responsive.dart'; //class pour rebdre les pages responsive
-// import 'package:listo/features/register/ui/register.dart'; //page d'inscription
+import 'package:listo/features/register/ui/register.dart'; //page d'inscription
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -149,12 +149,12 @@ class _LoginState extends State<Login> {
                   const Text('Vous n\'avez pas de compte? '),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const Register(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Register(),
+                        ),
+                      );
                     },
                     child: Text(
                       'S\'inscrire',

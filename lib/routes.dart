@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listo/features/login/ui/login.dart';
-// import 'package:listo/features/register/ui/register.dart';
+import 'package:listo/features/register/ui/register.dart';
 
 class Routes {
   static const String startPage = '/start';
@@ -11,8 +11,8 @@ class Routes {
     switch (settings.name) {
       case loginPage:
         return MaterialPageRoute(builder: (_) => const Login());
-      // case registerPage:
-      //   return MaterialPageRoute(builder: (_) => const Register());
+      case registerPage:
+        return MaterialPageRoute(builder: (_) => const Register());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
