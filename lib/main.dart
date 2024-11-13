@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:listo/pages/login.dart';
-// import 'package:test/pages/home.dart';
-// import 'package:test/pages/register.dart';
+import 'package:listo/core/theme/theme.dart';
+import 'package:listo/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,13 +16,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // title: 'Se connecter',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      // ),
-      home: Login(),
+      theme: AppTheme.lightTheme, // Utilisation du thème
+      initialRoute: Routes.loginPage,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
