@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
-import 'view/start_screen/task_screen.dart';
+import 'package:listo/core/theme/theme.dart';
+import 'package:listo/routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Task Manager',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: TaskScreen(),
+      theme: AppTheme.lightTheme,
+      initialRoute: Routes.homePage,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
